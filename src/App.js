@@ -15,7 +15,7 @@ class App extends Component {
  }
  render() {
    
-   console.log(this.props.location.pathname)
+  //  console.log(this.props.location.pathname)
    return (
      <div className="App">
        {(this.props.location.pathname !== '/') ? <Nav /> : <></> }

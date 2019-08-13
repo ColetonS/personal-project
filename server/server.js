@@ -17,9 +17,11 @@ app.use(session({
     }
 }))
 
-app.post('/api/auth/register', authCtrl.register)
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
     app.listen(SERVER_PORT, () => console.log(`${SERVER_PORT} puppies on parade`))
 })
+
+app.post('/api/auth/register', authCtrl.register)
+app.post('/api/auth/login', authCtrl.login)
