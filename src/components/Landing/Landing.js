@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios'
+import './Landing.css'
 
 export default class Landing extends Component {
   state = {
@@ -35,8 +36,13 @@ export default class Landing extends Component {
 
   render() {
     return (
-      <div>
-        <div className='login-or-register'>
+      <div className='landing'>
+        <div className="logo">
+          <div>
+            :)
+          </div>
+        </div>
+        <div className='input-container'>
           <input onChange={e => this.handleChange(e, 'usernameInput')} type='text' placeholder='username'/>
           <input onChange={e => this.handleChange(e, 'passwordInput')} type='password' placeholder='password'/>
           <button onClick={this.loginUser}>Login</button>
