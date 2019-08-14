@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import axios from 'axios'
+import {connect} from 'react-redux'
+import {setUser} from '../../ducks/reducer'
 import './Landing.css'
 
-export default class Landing extends Component {
+class Landing extends Component {
   state = {
       usernameInput: '',
       passwordInput: ''
@@ -18,7 +20,8 @@ export default class Landing extends Component {
   registerUser = () => {
       const {usernameInput:username, passwordInput:password} = this.state
       axios.post('/api/auth/register', {username, password}).then(res => {
-          console.log(res)
+          const {user_id, username, user_image} = res.data.user
+          this.props.setUser({user_id, username, user_image})
           this.props.history.push('/dashboard')
       })
       .catch(() => {
@@ -29,12 +32,16 @@ export default class Landing extends Component {
   loginUser = () => {
       const {usernameInput:username, passwordInput:password} = this.state
       axios.post('/api/auth/login', {username, password}).then(res => {
-          // console.log(res)
+        // console.log(res.data.user)
+          const {user_id, username, user_image} = res.data.user
+          // console.log({user_id, username, user_image})
+          this.props.setUser({user_id, username, user_image})
           this.props.history.push('/dashboard')
       })
   }
 
   render() {
+    console.log(this.props.history)
     return (
       <div className='landing'>
         <div className="logo">
@@ -52,3 +59,10 @@ export default class Landing extends Component {
     );
   }
 }
+
+function mapStateToProps(reduxState) {
+  const {user_id, username, user_image} = reduxState
+  return {user_id, username, user_image}
+}
+
+export default connect(mapStateToProps, {setUser})(Landing)
