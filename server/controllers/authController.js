@@ -35,9 +35,9 @@ module.exports = {
             if (user.length === 0) {
                 return res.status(401).send({message: 'User not found'})
             }
-            console.log(user)
+            // console.log(user)
             const result = bcrypt.compareSync(password, user[0].password)
-            console.log(result)
+            // console.log(result)
             if (result) {
                 delete user[0].password
                 req.session.user = user[0]

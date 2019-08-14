@@ -29,7 +29,7 @@ export default class Landing extends Component {
   loginUser = () => {
       const {usernameInput:username, passwordInput:password} = this.state
       axios.post('/api/auth/login', {username, password}).then(res => {
-          console.log(res)
+          // console.log(res)
           this.props.history.push('/dashboard')
       })
   }
