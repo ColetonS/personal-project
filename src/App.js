@@ -20,7 +20,6 @@ class App extends Component {
  componentDidMount() {
    axios.get('/api/auth/currentUser').then(res => {
     this.props.setUser(res.data)
-    console.log(res.data)
    })
  }
 

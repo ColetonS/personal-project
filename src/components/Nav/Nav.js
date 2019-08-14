@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 import {logoutUser} from '../../ducks/reducer'
 import axios from 'axios'
 import {withRouter} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import './Nav.scss'
 
 class Nav extends Component {
     
@@ -18,14 +20,16 @@ class Nav extends Component {
 
         // console.log(this.props)
         return (
-            <div>
-                <div>
-                    Nav
-                </div>
+            <div className='nav'>
                 <img src={this.props.user_image} alt='profile-pic' />
                 <h3>{this.props.username}</h3>
+                    <Link to='/dashboard'>
+                        <p>Home</p>
+                    </Link>
                 <div className="logout">
-                    <button onClick={this.logout}>Logout</button>
+                    <p onClick={this.logout}>Logout</p>
+                </div>
+                <div>
                 </div>
             </div>
         )
