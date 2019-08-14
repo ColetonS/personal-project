@@ -1,0 +1,41 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #BFC3BA;
+
+.landing {
+    display: flex;
+    height: 920px;
+    // min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // border: 1px solid red;
+    font: $font-stack;
+    color: $primary-color;
+    // background: #000033;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 400px;
+    width: 30%;
+    border: 2px solid #A63446;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        // border: 1px solid purple;
+        width: 48%;
+    }
+    
+} 
+
+.logo {
+    display: flex;
+    height: 50px;
+    // border: 1px solid green;
+    align-items: center;
+}
+
