@@ -3,6 +3,9 @@ import './App.css';
 import Nav from './components/Nav/Nav'
 import routes from './routes'
 import {withRouter} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {setUser} from './ducks/reducer'
+import axios from 'axios'
 
 
 class App extends Component {
@@ -13,6 +16,14 @@ class App extends Component {
 
    }
  }
+
+ componentDidMount() {
+   axios.get('/api/auth/currentUser').then(res => {
+    this.props.setUser(res.data)
+    console.log(res.data)
+   })
+ }
+
  render() {
    
   //  console.log(this.props.location.pathname)
@@ -25,4 +36,4 @@ class App extends Component {
  }
  }
 
-export default withRouter(App)
+export default connect(null, {setUser})(withRouter(App))

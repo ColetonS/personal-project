@@ -43,7 +43,7 @@ class Landing extends Component {
   };
 
   render() {
-    console.log(this.props.history);
+    // console.log(this.props.history);
     return (
       <div className="landing">
         <div className="input-container">
