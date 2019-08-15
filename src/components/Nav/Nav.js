@@ -26,6 +26,9 @@ class Nav extends Component {
                     <Link to='/dashboard'>
                         <p>Home</p>
                     </Link>
+                    <Link to='/imitations'>
+                        <p>Imitations</p>
+                    </Link>
                 <div className="logout">
                     <p onClick={this.logout}>Logout</p>
                 </div>

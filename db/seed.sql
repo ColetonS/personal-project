@@ -27,3 +27,16 @@ VALUES ('It was a big, squarish frame house that had once been white, decorated 
        ('I sat up on the bed, in senseless and perfect silence, as if Madden was already peering at me. Something—perhaps merely a desire to prove my total penury to myself—made me empty out my pockets. I found just what I knew I was going to find. The American watch, the nickel-plated chain and the square coin, the key ring with the useless but compromising keys to Runeberg''s office, the notebook, a letter which I decided to destroy at once (and which I did not destroy), a five shilling piece, two single shillings and some pennies, a red and blue pencil, a handkerchief—and a revolver with a single bullet. Absurdly I held it and weighed it in my hand, to give myself courage. Vaguely I thought that a pistol shot can be heard for a great distance. ', 'Jorge Luis Borges', '"The Garden of Forking Paths"');
       
 SELECT * FROM excerpts;
+
+-------------------------------------------------------------------
+CREATE TABLE imitations (
+completed_imitation_id SERIAL PRIMARY KEY,
+completed_imitation_text TEXT,
+user_id INTEGER REFERENCES writers(user_id),
+excerpt_id INTEGER REFERENCES excerpts(excerpt_id)
+);
+
+INSERT INTO imitations (completed_imitation_text, user_id, excerpt_id)
+VALUES ('test imitation text', 11, 1);
+
+SELECT * FROM imitations;

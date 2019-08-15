@@ -5,6 +5,7 @@ const massive = require('massive')
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env
 const authCtrl = require('./controllers/authController')
 const excerptsCtrl = require('./controllers/excerptsController')
+const imitationsCtrl = require('./controllers/imitationsController')
 
 const app = express()
 
@@ -30,4 +31,5 @@ app.delete('/api/auth/logout', authCtrl.logout)
 app.get('/api/auth/currentUser', authCtrl.currentUser)
 app.get('/api/excerpts', excerptsCtrl.getRandomExcerpt)
 app.get('/api/excerpts/new-excerpt', excerptsCtrl.getNewExcerpt)
-app.get('/api/excerpts/currentExcerpt', excerptsCtrl.currentExcerpt)
+app.get('/api/excerpts/currentExcerpt', excerptsCtrl.currentExcerpt),
+app.get('/api/imitations', imitationsCtrl.getAllImitations)

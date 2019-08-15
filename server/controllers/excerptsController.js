@@ -2,13 +2,13 @@ module.exports = {
     getRandomExcerpt: async (req, res) => {
         try {
             const db = req.app.get('db')
-            const allExcerpts = await db.get_all_excerpts([])
+            const allExcerpts = await db.get_all_excerpts()
             const index = Math.floor((Math.random() * (allExcerpts.length - 1)))
             if (req.session.excerpt) {
                 return res.status(200).send(req.session.excerpt)
             }
             req.session.excerpt = allExcerpts[index]
-            console.log(req.session)
+            // console.log(req.session)
             res.status(200).send(allExcerpts[index])
 
         }
@@ -25,10 +25,10 @@ module.exports = {
         try {
             delete req.session.excerpt
             const db = req.app.get('db')
-            const allExcerpts = await db.get_all_excerpts([])
+            const allExcerpts = await db.get_all_excerpts()
             const index = Math.floor((Math.random()) * (allExcerpts.length - 1))
             req.session.excerpt = allExcerpts[index]
-            console.log(req.session)
+            // console.log(req.session)
             res.status(200).send(allExcerpts[index])
         }
         catch(err) {
