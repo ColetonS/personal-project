@@ -5,7 +5,8 @@ import axios from 'axios'
 export default class ImitationExercise extends Component {
     state = {
         randomExcerpt: {},
-        userInput: ''
+        userInput: '',
+        currentExcerpt: {}
     }
 
     componentDidMount() {
@@ -13,13 +14,31 @@ export default class ImitationExercise extends Component {
             this.setState({
                 randomExcerpt: res.data
             })
-            console.log(res.data)
-            console.log(this.state.randomExcerpt)
+            axios.get('/api/excerpts/currentExcerpt').then(res => {
+                this.setState({
+                  currentExcerpt: res.data
+                })
+              })
+        })
+    }
+
+    handleChange(e, key) {
+        this.setState({
+            [key]: e.target.value
+        })
+        console.log(this.state.userInput)
+    }
+
+    getNewExcerpt = () => {
+        axios.get('/api/excerpts/new-excerpt').then(res => {
+            this.setState({
+                randomExcerpt: res.data
+            })
         })
     }
 
     render() {
-
+        console.log(this.state)
         return (
             <div className='imitation-exercise'>
                 <header>
@@ -33,7 +52,10 @@ export default class ImitationExercise extends Component {
                     <p>{this.state.randomExcerpt.excerpt_narrative}</p>
                 </div>
                 <div className="imitation-container">
-                    <textarea rows='20' cols='100'></textarea>
+                    <textarea onChange={e => this.handleChange(e, 'userInput')} rows='20' cols='100'></textarea>
+                </div>
+                <div className="button-container">
+                    <button onClick={this.getNewExcerpt}>New Excerpt</button>
                 </div>
             </div>
         )

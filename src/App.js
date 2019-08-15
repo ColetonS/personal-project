@@ -13,7 +13,7 @@ class App extends Component {
    super()
 
    this.state = {
-
+    
    }
  }
 
@@ -21,6 +21,7 @@ class App extends Component {
    axios.get('/api/auth/currentUser').then(res => {
     this.props.setUser(res.data)
    })
+   
  }
 
  render() {

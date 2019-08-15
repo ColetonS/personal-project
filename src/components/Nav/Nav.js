@@ -18,7 +18,7 @@ class Nav extends Component {
 
     render() {
 
-        // console.log(this.props)
+        // console.log(this.session)
         return (
             <div className='nav'>
                 <img src={this.props.user_image} alt='profile-pic' />
