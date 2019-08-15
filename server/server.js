@@ -4,6 +4,7 @@ const session = require('express-session')
 const massive = require('massive')
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env
 const authCtrl = require('./controllers/authController')
+const excerptsCtrl = require('./controllers/excerptsController')
 
 const app = express()
 
@@ -27,3 +28,4 @@ app.post('/api/auth/register', authCtrl.register)
 app.post('/api/auth/login', authCtrl.login)
 app.delete('/api/auth/logout', authCtrl.logout)
 app.get('/api/auth/currentUser', authCtrl.currentUser)
+app.get('/api/excerpts', excerptsCtrl.getRandomExcerpt)
