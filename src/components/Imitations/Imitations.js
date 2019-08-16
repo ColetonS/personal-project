@@ -12,11 +12,6 @@ export default class Imitations extends Component {
       this.setState({
         allImitations: res.data
       });
-
-      // const imitations = res.data.map(imitation => {
-      //     const completedText = imitation.completed_imitation_text
-      //     console.log(completedText)
-      // })
     });
   }
 
@@ -25,13 +20,20 @@ export default class Imitations extends Component {
       const {
         completed_imitation_id,
         completed_imitation_text,
-        user_id,
-        excerpt_id
+        excerpt_text,
+        excerpt_author,
+        excerpt_narrative,
+        excerpt_image
       } = imitation;
-      const text = completed_imitation_text;
+      const imitationText = completed_imitation_text;
+      const excerptText = excerpt_text;
       return (
-        <div key={completed_imitation_id}>
-          <p>{text}</p>
+        <div className='' key={completed_imitation_id}>
+          <p>{excerptText}</p>
+          <img src={excerpt_image} alt='author-pic'/>
+          <textarea rows="20" cols="100">
+            {imitationText}
+          </textarea>
         </div>
       );
     });
@@ -40,8 +42,10 @@ export default class Imitations extends Component {
       <div className="imitations-container">
         <header>
           <h1>Your Imitations</h1>
-          {mappedImitations}
         </header>
+          <div>
+              {mappedImitations}
+          </div>
       </div>
     );
   }
