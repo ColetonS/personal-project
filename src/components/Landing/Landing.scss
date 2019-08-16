@@ -1,33 +1,52 @@
-$font-stack: Helvetica, sans-serif;
 $primary-color: #BFC3BA;
 
 .landing {
     display: flex;
-    height: 920px;
+    height: 568px;
+    width: 320px;
     // min-height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // border: 1px solid red;
-    font: $font-stack;
+    border: 1px solid white;
     color: $primary-color;
     // background: #000033;
 }
+
+.title {
+    font-size: 20px;
+}
+
+
 
 .input-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 400px;
-    width: 30%;
-    border: 2px solid #A63446;
+    width: 300px;
+    // border: 2px solid #A63446;
     div {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        // border: 1px solid purple;
-        width: 48%;
+        // border: 1px solid black;
+        width: 260px;
+        height: 50px;
+        // font-size: 10px;
+    }
+    input {
+        width: 130px;
+
+    }
+    button {
+        background-color: #0C6291;
+        border: none;
+        border-radius: 20px;
+        width: 60px;
+        height: 40px;
+        color: $primary-color;
     }
     
 } 
@@ -39,3 +58,4 @@ $primary-color: #BFC3BA;
     align-items: center;
 }
 
+// @media (max-width )

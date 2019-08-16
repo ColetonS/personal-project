@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { setUser } from "../../ducks/reducer";
 import "./Landing.scss";
 
+
 class Landing extends Component {
   state = {
     usernameInput: "",
@@ -47,10 +48,10 @@ class Landing extends Component {
     return (
       <div className="landing">
         <div className="input-container">
-          <div className="logo">
+          {/* <div className="logo">
             <div>Logo</div>
-          </div>
-          <div className="title">App Name</div>
+          </div> */}
+          <h1>Write On</h1>
           <div>
             <p>Username:</p>
             <input
@@ -59,7 +60,7 @@ class Landing extends Component {
             />
           </div>
           <div>
-            <p>Password</p>
+            <p>Password:</p>
             <input
               onChange={e => this.handleChange(e, "passwordInput")}
               type="password"
