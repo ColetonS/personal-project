@@ -28,22 +28,23 @@ export default class Imitations extends Component {
       const imitationText = completed_imitation_text;
       const excerptText = excerpt_text;
       return (
-        <div className='' key={completed_imitation_id}>
+        <div className='imitation' key={completed_imitation_id}>
           <p>{excerptText}</p>
-          <img src={excerpt_image} alt='author-pic'/>
-          <textarea rows="20" cols="100">
+          <img className='img-class' src={excerpt_image} alt='author-pic'/>
+          <textarea rows="7" cols="37">
             {imitationText}
           </textarea>
+          <button>Edit</button>
         </div>
       );
     });
 
     return (
-      <div className="imitations-container">
+      <div className="main-imitations-container">
         <header>
-          <h1>Your Imitations</h1>
+          <h1>My Imitations</h1>
         </header>
-          <div>
+          <div className='imitations-container'>
               {mappedImitations}
           </div>
       </div>

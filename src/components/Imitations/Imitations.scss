@@ -1,4 +1,41 @@
-.imitations-container {
+$primary-color: #BFC3BA;
+
+.main-imitations-container {
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: $primary-color;
+    header {
+        border: 1px solid green;
+        margin-top: 150px;
+        margin-bottom: 30px;
+    }
+    // overflow: auto;
+}
+.imitations-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    border: 1px solid blue;
+    height: 500%;
+    width: 90%;
+    font-size: 8px;
+    overflow: auto;
+
+}
+.imitation {
+    border: 1px solid red;
+    // overflow: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.img-class {
+    display: none;
 }
