@@ -41,8 +41,9 @@ export default class ImitationExercise extends Component {
     // console.log(this.state)
     return (
       <div className="imitation-exercise">
+        <div className='page-contents'>
         <header>
-          <h1>Welcome to the Imitation Exercise</h1>
+          <h1>Imitate</h1>
         </header>
           <div className="image-container">
             <img
@@ -50,22 +51,23 @@ export default class ImitationExercise extends Component {
               alt="author-pic"
             />
           </div>
-        <div className='excerpt-container'>
-          <div>
-            <p>{this.state.randomExcerpt.excerpt_text}</p>
-            <p>{this.state.randomExcerpt.excerpt_author}</p>
-            <p>{this.state.randomExcerpt.excerpt_narrative}</p>
+          <div className="excerpt-container">
+            <div>
+              <p>{this.state.randomExcerpt.excerpt_text}</p>
+              <p>{this.state.randomExcerpt.excerpt_author}</p>
+              <p>{this.state.randomExcerpt.excerpt_narrative}</p>
+            </div>
           </div>
-        </div>
-        <div className="imitation-container">
-          <textarea
-            onChange={e => this.handleChange(e, "userInput")}
-            rows="20"
-            cols="100"
-          />
-        </div>
-        <div className="button-container">
-          <button onClick={this.getNewExcerpt}>New Excerpt</button>
+          <div className="imitation-container">
+            <textarea
+              onChange={e => this.handleChange(e, "userInput")}
+              rows="6"
+              cols="30"
+            />
+          </div>
+          <div className="button-container">
+            <button onClick={this.getNewExcerpt}>New Excerpt</button>
+          </div>
         </div>
       </div>
     );
