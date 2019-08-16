@@ -15,6 +15,15 @@ export default class Imitations extends Component {
     });
   }
 
+  deleteImitation(completed_imitation_id) {
+    axios.delete(`/api/imitations/${completed_imitation_id}`)
+    .then(res => {
+      this.setState({
+        allImitations: res.data
+      })
+    })
+  }
+
   render() {
     const mappedImitations = this.state.allImitations.map(imitation => {
       const {
@@ -28,13 +37,16 @@ export default class Imitations extends Component {
       const imitationText = completed_imitation_text;
       const excerptText = excerpt_text;
       return (
-        <div className='imitation' key={completed_imitation_id}>
+        <div className="imitation" key={completed_imitation_id}>
           <p>{excerptText}</p>
-          <img className='img-class' src={excerpt_image} alt='author-pic'/>
-          <textarea rows="7" cols="37">
-            {imitationText}
+          <img className="img-class" src={excerpt_image} alt="author-pic" />
+          <textarea rows="7" cols="37" defaultValue={imitationText}>
+            
           </textarea>
-          <button>Edit</button>
+          <div className='imitations-buttons'>
+            <button>Edit</button>
+            <button onClick={() => this.deleteImitation(completed_imitation_id)}>Delete</button>
+          </div>
         </div>
       );
     });
@@ -44,9 +56,7 @@ export default class Imitations extends Component {
         <header>
           <h1>My Imitations</h1>
         </header>
-          <div className='imitations-container'>
-              {mappedImitations}
-          </div>
+        <div className="imitations-container">{mappedImitations}</div>
       </div>
     );
   }

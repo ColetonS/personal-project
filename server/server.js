@@ -33,3 +33,4 @@ app.get('/api/excerpts', excerptsCtrl.getRandomExcerpt)
 app.get('/api/excerpts/new-excerpt', excerptsCtrl.getNewExcerpt)
 app.get('/api/excerpts/currentExcerpt', excerptsCtrl.currentExcerpt),
 app.get('/api/imitations', imitationsCtrl.getAllImitations)
+app.delete('/api/imitations/:completed_imitation_id', imitationsCtrl.deleteImitation)
