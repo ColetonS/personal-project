@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Imitations.scss";
 import axios from "axios";
+import {Link} from 'react-router-dom'
 
 export default class Imitations extends Component {
   state = {
@@ -44,7 +45,9 @@ export default class Imitations extends Component {
             
           </textarea>
           <div className='imitations-buttons'>
-            <button>Edit</button>
+            <Link to='/imitation/:imitationid'>
+              <button>Edit</button>
+            </Link>
             <button onClick={() => this.deleteImitation(completed_imitation_id)}>Delete</button>
           </div>
         </div>

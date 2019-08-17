@@ -39,7 +39,9 @@ class Nav extends Component {
         >
           <div className="profile-container">
             <img src={this.props.user_image} alt="profile-pic" />
-            <h3>{this.props.username}</h3>
+            <Link to='/profile'>
+              <h3>{this.props.username}</h3>
+            </Link>
           </div>
           <div className="link-container">
             <div>

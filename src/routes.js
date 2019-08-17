@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard/Dashboard'
 import ImitationExercise from './components/ImitationExercise/ImitationExercise'
 import Imitations from './components/Imitations/Imitations'
 import Imitation from './components/Imitation/Imitation'
+import Profile from './components/Profile/Profile'
 
 export default (
     <Switch>
@@ -13,5 +14,6 @@ export default (
         <Route path = '/imitation-exercise' component = {ImitationExercise} />
         <Route path = '/imitations' component = {Imitations} />
         <Route path = '/imitation/:imitationid' component = {Imitation} />
+        <Route path = '/profile' component = {Profile} />
     </Switch>
 )
