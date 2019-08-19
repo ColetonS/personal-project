@@ -8,6 +8,7 @@ import {setUser} from './ducks/reducer'
 import axios from 'axios'
 
 
+
 class App extends Component {
  constructor() {
    super()
@@ -31,6 +32,7 @@ class App extends Component {
      <div className="App">
        {(this.props.location.pathname !== '/') ? <Nav /> : <></> }
        {routes}
+      
      </div>
    );
  }

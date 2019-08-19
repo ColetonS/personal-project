@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Imitations.scss";
 import axios from "axios";
 import {Link} from 'react-router-dom'
+import Quill2 from '../Quill2'
 
 export default class Imitations extends Component {
   state = {
@@ -41,12 +42,18 @@ export default class Imitations extends Component {
         <div className="imitation" key={completed_imitation_id}>
           <p>{excerptText}</p>
           <img className="img-class" src={excerpt_image} alt="author-pic" />
-          <textarea rows="7" cols="37" defaultValue={imitationText}>
+          {/* <textarea rows="7" cols="37" defaultValue={imitationText}>
             
-          </textarea>
+          </textarea> */}
+            <br />
+            <br />
+          <div>
+            <Quill2 imitationText={imitationText} />
+            {/* <p>{imitationText}</p> */}
+          </div>
           <div className='imitations-buttons'>
             <Link to='/imitation/:imitationid'>
-              <button>Edit</button>
+              <button>Update</button>
             </Link>
             <button onClick={() => this.deleteImitation(completed_imitation_id)}>Delete</button>
           </div>

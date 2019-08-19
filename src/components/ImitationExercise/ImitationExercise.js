@@ -3,6 +3,8 @@ import "./ImitationExercise.scss";
 import axios from "axios";
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
+import Quill from '../Quill'
+
 
 class ImitationExercise extends Component {
   state = {
@@ -24,11 +26,11 @@ class ImitationExercise extends Component {
     });
   }
 
-  handleChange(e, key) {
+  handleChange = (e, key) => {
     this.setState({
-      [key]: e.target.value
+      [key]: e
     });
-    // console.log(this.state.userInput);
+    console.log(this.state.userInput);
   }
 
   getNewExcerpt = () => {
@@ -50,7 +52,7 @@ class ImitationExercise extends Component {
   }
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     return (
       <div className="imitation-exercise">
         <div className='page-contents'>
@@ -71,11 +73,12 @@ class ImitationExercise extends Component {
             </div>
           </div>
           <div className="imitation-container">
-            <textarea
+            {/* <textarea
               onChange={e => this.handleChange(e, "userInput")}
               rows="6"
               cols="30"
-            />
+            /> */}
+             <Quill handleChange={this.handleChange} />
           </div>
           <div className="button-container">
             <button onClick={this.getNewExcerpt}>New Excerpt</button>
