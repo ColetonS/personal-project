@@ -1,61 +1,160 @@
-$primary-color: #BFC3BA;
+$primary-color: #bfc3ba;
 
 .landing {
-    display: flex;
-    height: 568px;
-    width: 320px;
-    // min-height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid white;
-    color: $primary-color;
-    // background: #000033;
+  display: flex;
+  height: 100%;
+  width: 320px;
+  // min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    // border: 1px solid blue;
+  color: $primary-color;
+  // background: #000033;
 }
 
-.title {
-    font-size: 20px;
-}
-
-
+// .title {
+//   font-size: 20px;
+// }
 
 .input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+  width: 300px;
+//   border: 2px solid #A63446;
+  div {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 400px;
-    width: 300px;
-    // border: 2px solid #A63446;
-    div {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        // border: 1px solid black;
-        width: 260px;
-        height: 50px;
-        // font-size: 10px;
-    }
-    input {
-        width: 130px;
-
-    }
-    button {
-        background-color: #0C6291;
-        border: none;
-        border-radius: 20px;
-        width: 60px;
-        height: 40px;
-        color: $primary-color;
-    }
-    
-} 
-
-.logo {
-    display: flex;
+    justify-content: space-evenly;
+    // border: 1px solid black;
+    width: 260px;
     height: 50px;
-    // border: 1px solid green;
-    align-items: center;
+    // font-size: 10px;
+  }
+  input {
+    width: 130px;
+  }
+  button {
+    background-color: #0c6291;
+    border: none;
+    border-radius: 20px;
+    width: 60px;
+    height: 40px;
+    color: $primary-color;
+  }
 }
 
-// @media (max-width )
+.logo {
+  display: flex;
+  height: 50px;
+  border: 1px solid green;
+  align-items: center;
+}
+
+@media (min-width: 375px) {
+  .landing {
+    width: 375px;
+  }
+}
+@media (min-width: 411px) {
+  .landing {
+    width: 411px;
+  }
+}
+@media (min-width: 500px) {
+  .landing {
+    width: 500px;
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+}
+@media (min-width: 600px) {
+  .landing {
+    width: 600px;
+  }
+}
+@media (min-width: 768px) {
+  .landing {
+    width: 768px;
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 25px;
+    }
+  }
+  .input-container {
+    button {
+      width: 80px;
+      height: 60px;
+      font-size: 16px;
+      border-radius: 30px;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .landing {
+    width: 992px;
+    h1 {
+        font-size: 60px;
+        // border: 1px solid black;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+      }
+      p {
+        font-size: 30px;
+      }
+  }
+}
+@media (min-width: 1024px) {
+  .landing {
+    width: 1024px;
+  }
+}
+@media (min-width: 1200px) {
+    .landing {
+      width: 1200px;
+    }
+  }
+@media (min-width: 1400px) {
+    .landing {
+      width: 1400px;
+      
+    }
+  }
+  @media (min-width: 1500px) {
+      .landing {
+          width: 1500px;
+      }
+  }
+  @media (min-width: 1600px) {
+      .landing {
+          width: 1600px;
+      }
+  }
+  @media (min-width: 1800px) {
+      .landing {
+          width: 1800px;
+      }
+  }
+  @media (min-width: 1920px) {
+      .landing {
+          width: 1920px;
+          height: 1080px;
+          margin: 0;
+      }
+  }
+  @media (min-width: 2000px) {
+      .landing {
+          width: 2000px;
+      }
+  }
+ 

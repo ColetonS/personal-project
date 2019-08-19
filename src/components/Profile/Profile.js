@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { withRouter } from "react-router-dom";
+import './Profile.scss'
 
 export default class Profile extends Component {
 
@@ -8,8 +9,8 @@ export default class Profile extends Component {
 
     render() {
         return (
-            <div>
-                <header>
+            <div className='profile-container'>
+                <header className='profile-header'>
                     <h1>My Profile</h1>
                 </header>
                 <div className="edit-username">
