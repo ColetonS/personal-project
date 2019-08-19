@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./ImitationExercise.scss";
 import axios from "axios";
 import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom'
 
 class ImitationExercise extends Component {
   state = {
@@ -44,7 +45,7 @@ class ImitationExercise extends Component {
     const {excerpt_id} = this.state.randomExcerpt
     axios.post('/api/imitations', {completed_imitation_text, user_id, excerpt_id})
          .then(res => {
-           console.log(res.data)
+           this.props.history.push('/imitations')
          })
   }
 
@@ -91,4 +92,4 @@ function mapStateToProps(reduxState) {
   return {user_id}
 }
 
-export default connect(mapStateToProps)(ImitationExercise)
+export default connect(mapStateToProps)(withRouter(ImitationExercise))
