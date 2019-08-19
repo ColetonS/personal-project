@@ -20,5 +20,16 @@ module.exports = {
         }).catch(err => {
             res.status(500).send(`Error in deleting imitation: ${err}`)
         })
+    },
+    addImitation: async (req, res) => {
+        try {
+            const db = req.app.get('db')
+            const {completed_imitation_text, user_id, excerpt_id} = req.body
+            const imitation = await db.insert_imitation({completed_imitation_text, user_id, excerpt_id})
+            res.status(200).send(imitation)
+        }
+        catch(err) {
+            res.status(500).send(`Error in saving imitation: ${err}`)
+        }
     }
 }
