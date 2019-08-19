@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./ImitationExercise.scss";
 import axios from "axios";
+import {connect} from 'react-redux'
 
-export default class ImitationExercise extends Component {
+class ImitationExercise extends Component {
   state = {
     randomExcerpt: {},
     userInput: "",
@@ -26,7 +27,7 @@ export default class ImitationExercise extends Component {
     this.setState({
       [key]: e.target.value
     });
-    console.log(this.state.userInput);
+    // console.log(this.state.userInput);
   }
 
   getNewExcerpt = () => {
@@ -37,8 +38,18 @@ export default class ImitationExercise extends Component {
     });
   };
 
+  saveImitation = () => {
+    const {userInput: completed_imitation_text} = this.state
+    const {user_id} = this.props
+    const {excerpt_id} = this.state.randomExcerpt
+    axios.post('/api/imitations', {completed_imitation_text, user_id, excerpt_id})
+         .then(res => {
+           console.log(res.data)
+         })
+  }
+
   render() {
-    // console.log(this.state)
+    console.log(this.state)
     return (
       <div className="imitation-exercise">
         <div className='page-contents'>
@@ -67,9 +78,17 @@ export default class ImitationExercise extends Component {
           </div>
           <div className="button-container">
             <button onClick={this.getNewExcerpt}>New Excerpt</button>
+            <button onClick={this.saveImitation}>Save Imitation</button>
           </div>
         </div>
       </div>
     );
   }
 }
+
+function mapStateToProps(reduxState) {
+  const {user_id} = reduxState
+  return {user_id}
+}
+
+export default connect(mapStateToProps)(ImitationExercise)
