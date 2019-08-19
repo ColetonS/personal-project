@@ -37,7 +37,7 @@ class Nav extends Component {
           className="nav"
           style={{ display: this.state.showMenu ? null : "none" }}
         >
-          <div className="profile-container">
+          <div className="profile-info-container">
             <img src={this.props.user_image} alt="profile-pic" />
             <Link to='/profile'>
               <h3>{this.props.username}</h3>

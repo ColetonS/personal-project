@@ -2,8 +2,6 @@ $primary-color: #BFC3BA;
 p {
     cursor: pointer;
     color: $primary-color;
-    
-    
 }
 
 a {
@@ -43,8 +41,8 @@ img {
     color: $primary-color;
 }
 
-.profile-container {
-    // border: 1px solid purple;
+.profile-info-container {
+    // border: 1px solid black;
     display: flex;
     justify-content: space-between;
     width: 150px;
