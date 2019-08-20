@@ -32,7 +32,8 @@ $primary-color: #bfc3ba;
 }
 
 .profile-info-container {
-  border: 1px solid black;
+  // border: 1px solid black;
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -223,7 +224,8 @@ $primary-color: #bfc3ba;
 @media (min-width: 1111px) {
   .nav {
     left: 0;
-    width: 100%;
+    // right: 20px;
+    width: 90%;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -238,6 +240,7 @@ $primary-color: #bfc3ba;
       width: 90px;
     }
     width: 220px;
+    height: 150px;
     flex-direction: column;
   }
 }
