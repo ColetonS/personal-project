@@ -31,5 +31,19 @@ module.exports = {
         catch(err) {
             res.status(500).send(`Error in saving imitation: ${err}`)
         }
+    },
+    updateImitation: async (req, res) => {
+        try {
+            const db = req.app.get('db')
+            const {completed_imitation_text} = req.body
+            const {completed_imitation_id} = req.params
+            console.log(completed_imitation_id, completed_imitation_text)
+            const updatedImitation = await db.update_imitation({completed_imitation_id, completed_imitation_text})
+            res.status(200).send(updatedImitation)
+        }
+        catch(err) {
+            res.status(500).send(`Error in updating imitation: ${err}`)
+        }
     }
+    
 }

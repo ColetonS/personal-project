@@ -1,13 +1,21 @@
 import React, { Component } from "react";
 import "./Imitations.scss";
 import axios from "axios";
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import Quill2 from '../Quill2'
 
 export default class Imitations extends Component {
-  state = {
-    allImitations: []
-  };
+  constructor(props) {
+    super(props)
+    
+    this.state = {
+      allImitations: [],
+      userInput: ''
+    };
+
+    this.handleChange = this.handleChange.bind(this)
+
+  }
 
   componentDidMount() {
     axios.get("/api/imitations").then(res => {
@@ -23,6 +31,27 @@ export default class Imitations extends Component {
       this.setState({
         allImitations: res.data
       })
+    })
+  }
+
+  handleChange(val) {
+    console.log(this.state)
+    this.setState({
+      userInput: val
+    })
+  }
+
+  updateImitation = (completed_imitation_id) => {
+    console.log('hit')
+    const {userInput: completed_imitation_text} = this.state
+    console.log(completed_imitation_text)
+    axios.put(`/api/imitations/${completed_imitation_id}`, {completed_imitation_text})
+    .then(res => {
+        console.log(res.data)
+        const {completed_imitation_id, completed_imitation_text} = res.data[0]
+    })
+    .catch(() => {
+      alert(`You've got yerself an error.`)
     })
   }
 
@@ -48,13 +77,16 @@ export default class Imitations extends Component {
             <br />
             <br />
           <div>
-            <Quill2 imitationText={imitationText} />
+            <Quill2 
+                onChange={this.handleChange} imitationText={imitationText} 
+                handleChange={this.handleChange}
+            />
             {/* <p>{imitationText}</p> */}
           </div>
           <div className='imitations-buttons'>
-            <Link to='/imitation/:imitationid'>
-              <button>Update</button>
-            </Link>
+            {/* <Link to='/imitation/:imitationid'> */}
+              <button onClick={() => this.updateImitation(completed_imitation_id)}>Update</button>
+            {/* </Link> */}
             <button onClick={() => this.deleteImitation(completed_imitation_id)}>Delete</button>
           </div>
         </div>

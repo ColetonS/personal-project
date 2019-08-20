@@ -36,4 +36,5 @@ app.get('/api/excerpts/currentExcerpt', excerptsCtrl.currentExcerpt),
 app.get('/api/imitations', imitationsCtrl.getAllImitations)
 app.delete('/api/imitations/:completed_imitation_id', imitationsCtrl.deleteImitation)
 app.post('/api/imitations', imitationsCtrl.addImitation)
+app.put('/api/imitations/:completed_imitation_id', imitationsCtrl.updateImitation)
 app.put('/api/users/:user_id', updateUserCtrl.updateUser)
