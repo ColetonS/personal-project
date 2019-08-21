@@ -4,8 +4,9 @@ module.exports = {
             const db = req.app.get('db')
             const {user_image} = req.body
             const {user_id} = req.params
-            // console.log(user_image, user_id)
-            const updatedUser = await db.update_user({user_image, user_id})
+            const {username} = req.session.user
+            // console.log(req.session)
+            const updatedUser = await db.update_user({user_image, user_id, username})
             res.status(200).send(updatedUser)
         }
         catch(err) {

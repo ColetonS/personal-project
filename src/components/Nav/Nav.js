@@ -38,8 +38,15 @@ class Nav extends Component {
           // style={{ display: this.state.showMenu ? null : "none" }}
         >
           <div className="profile-info-container">
-            <img src={this.props.user_image} alt="profile-pic" />
-            <Link to='/profile'>
+            {this.props.user_image ? (
+              <img src={this.props.user_image} alt="profile-pic" />
+            ) : (
+              <img
+                src="https://en.es-static.us/upl/2019/08/tardigrade-water-bear-Dec-8-2015-800x428.jpg"
+                alt="profile-pic"
+              />
+            )}
+            <Link to="/profile">
               <h3>{this.props.username}</h3>
             </Link>
           </div>

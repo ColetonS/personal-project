@@ -7,6 +7,7 @@ const authCtrl = require('./controllers/authController')
 const excerptsCtrl = require('./controllers/excerptsController')
 const imitationsCtrl = require('./controllers/imitationsController')
 const updateUserCtrl = require('./controllers/updateUserController')
+const nodeMailerCtrl = require('./controllers/nodeMailerController')
 
 const app = express()
 
@@ -38,3 +39,4 @@ app.delete('/api/imitations/:completed_imitation_id', imitationsCtrl.deleteImita
 app.post('/api/imitations', imitationsCtrl.addImitation)
 app.put('/api/imitations/:completed_imitation_id', imitationsCtrl.updateImitation)
 app.put('/api/users/:user_id', updateUserCtrl.updateUser)
+app.post('/api/email', nodeMailerCtrl.email)

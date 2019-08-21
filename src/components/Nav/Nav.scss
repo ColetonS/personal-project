@@ -17,7 +17,10 @@ $primary-color: #bfc3ba;
     color: #a63446;
     text-decoration: none;
     // border: 1px solid blue;
-  }
+    :hover {
+      color: #000033;
+    }
+  } 
 }
 
 .burger {
@@ -39,6 +42,13 @@ $primary-color: #bfc3ba;
   align-items: center;
   width: 150px;
   padding: 10px;
+  object {
+    width: 70px;
+    height: auto;
+    color: $primary-color;
+    border: 1px solid black;
+    border-radius: 25px;
+  }
   img {
     width: 50px;
     height: auto;
@@ -53,10 +63,23 @@ $primary-color: #bfc3ba;
   justify-content: space-evenly;
   width: 300px;
   // border: 1px solid violet;
-  a {
-    text-decoration: none;
-    color: $primary-color;
-  }
+  // a {
+  //   text-decoration: none;
+  //   color: $primary-color;
+  //   :hover {
+  //     color: #a63446;
+  //   }
+  // }
+
+}
+
+.logout {
+    cursor: url(`C:\Users\kolip\Downloads\fountain-pen.png`), pointer;
+    color: #a63446;
+    :hover {
+      color: #000033;
+    }
+
 }
 
 @media (min-width: 360px) {
@@ -98,6 +121,9 @@ $primary-color: #bfc3ba;
     img {
       width: 60px;
     }
+    object {
+      width: 80px;
+    }
   }
 }
 @media (min-width: 575px) {
@@ -121,6 +147,7 @@ $primary-color: #bfc3ba;
   .profile-info-container {
     img {
       width: 70px;
+      width: 90px;
     }
   }
 }
@@ -147,6 +174,9 @@ $primary-color: #bfc3ba;
     width: 200px;
     img {
       width: 80px;
+    }
+    object {
+      width: 100px;
     }
   }
 }
@@ -196,6 +226,9 @@ $primary-color: #bfc3ba;
     width: 250px;
     img {
       width: 80px;
+    }
+    object {
+      width: 110px;
     }
   }
 }

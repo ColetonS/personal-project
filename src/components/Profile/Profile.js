@@ -4,6 +4,7 @@ import {setUser} from '../../ducks/reducer'
 import './Profile.scss'
 import axios from 'axios'
 
+
 class Profile extends Component {
 
     state = {
@@ -20,9 +21,9 @@ class Profile extends Component {
         const {imageInput: user_image} = this.state
         axios.put(`/api/users/${user_id}`, {user_image})
         .then(res => {
-            const {user_id, user_image} = res.data[0]
+            const {user_id, user_image, username} = res.data[0]
             console.log({user_id, user_image})
-            this.props.setUser({user_id, user_image})
+            this.props.setUser({user_id, user_image, username})
         })
         .catch(() => {
             alert('Error, I guess.')
@@ -30,7 +31,7 @@ class Profile extends Component {
     }
 
     render() {
-    //    console.log(this.props)
+       console.log(this.props)
         return (
             <div className='profile-container'>
                 <header className='profile-header'>
@@ -50,8 +51,8 @@ class Profile extends Component {
 }
 
 function mapStateToProps(reduxState) {
-    const {user_image, user_id} = reduxState
-    return {user_image, user_id}
+    const {user_image, user_id, username} = reduxState
+    return {user_image, user_id, username}
 }
 
 export default connect(mapStateToProps, {setUser})(Profile)

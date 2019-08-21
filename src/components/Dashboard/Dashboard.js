@@ -16,6 +16,11 @@ export default class Dashboard extends Component {
               <button>Imitate</button>
             </Link>
           </div>
+          <footer>
+            <Link to='/email'>
+              <h5>Contact</h5>
+            </Link>
+          </footer>
         </div>
       </div>
     );

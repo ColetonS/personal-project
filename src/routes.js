@@ -6,6 +6,7 @@ import ImitationExercise from './components/ImitationExercise/ImitationExercise'
 import Imitations from './components/Imitations/Imitations'
 import Imitation from './components/Imitation/Imitation'
 import Profile from './components/Profile/Profile'
+import Email from './components/Email/Email'
 
 export default (
     <Switch>
@@ -15,5 +16,6 @@ export default (
         <Route path = '/imitations' component = {Imitations} />
         <Route path = '/imitation/:imitationid' component = {Imitation} />
         <Route path = '/profile' component = {Profile} />
+        <Route path = '/email' component = {Email} />
     </Switch>
 )

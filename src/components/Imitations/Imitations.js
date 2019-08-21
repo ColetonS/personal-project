@@ -69,12 +69,12 @@ export default class Imitations extends Component {
       const excerptText = excerpt_text;
       return (
         <div className="imitation" key={completed_imitation_id}>
-          <br/>
-          <p>{excerptText}</p>
-          <br/>
-          <img className="img-class" src={excerpt_image} alt="author-pic" />
-            <br />
-            <br />
+          <div>
+            <p>{excerptText}</p>
+          </div>
+          <div>
+            <img className="img-class" src={excerpt_image} alt="author-pic" />
+          </div>
           <div>
             <Quill2 
                 onChange={this.handleChange} imitationText={imitationText} 
@@ -82,16 +82,14 @@ export default class Imitations extends Component {
             />
             {/* <p>{imitationText}</p> */}
           </div>
-          <br/>
-          <br/>
+         
           <div className='imitations-buttons'>
             {/* <Link to='/imitation/:imitationid'> */}
               <button onClick={() => this.updateImitation(completed_imitation_id)}>Update</button>
             {/* </Link> */}
             <button onClick={() => this.deleteImitation(completed_imitation_id)}>Delete</button>
           </div>
-          <br/>
-          <br/>
+
         </div>
       );
     });
