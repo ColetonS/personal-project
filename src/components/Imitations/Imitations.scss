@@ -11,10 +11,9 @@ $primary-color: #BFC3BA;
     color: $primary-color;
     header {
         // border: 1px solid green;
-        margin-top: 150px;
-        margin-bottom: 30px;
+        margin-top: 160px;
+        margin-bottom: 10px
     }
-    // overflow: auto;
 }
 .imitations-container {
     display: flex;
@@ -24,19 +23,19 @@ $primary-color: #BFC3BA;
     // border: 1px solid blue;
     height: 100%;
     width: 90%;
-    font-size: 8px;
+    font-size: 9px;
     overflow: auto;
 
 }
 .imitation {
-    border: 1px solid black;
+    // border: 1px solid black;
     // overflow: auto;
-    // height: 800px;
+    height: 200x;
     // width: 2000px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 10px;
 }
 
 .img-class {
@@ -46,4 +45,31 @@ $primary-color: #BFC3BA;
 .imitations-buttons {
     display: flex;
     justify-content: space-evenly;
+    button {
+    border-radius: 20px;
+    background-color: #0c6291;
+    width: 60px;
+    height: 40px;
+    color: $primary-color;
+}
+padding-top: 10px;
+}
+
+.excerpt {
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.quill-container {
+    // height: 300px;
+   
+}
+
+.quill {
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: center;
+    // border: 2px solid purple;
 }

@@ -1,5 +1,13 @@
 $primary-color: #bfc3ba;
 
+@mixin linx {
+  color: #a63446;
+  text-decoration: none;
+  :hover {
+    color: #000033;
+  }
+}
+
 .nav {
   // border: 1px solid blue;
   position: absolute;
@@ -14,25 +22,20 @@ $primary-color: #bfc3ba;
   font-size: 12px;
   color: $primary-color;
   a {
-    color: #a63446;
-    text-decoration: none;
-    // border: 1px solid blue;
-    :hover {
-      color: #000033;
-    }
+    @include linx
   } 
 }
 
-.burger {
-  // border: 1px solid red;
-  height: 60px;
-  display: flex;
-  font-size: 40px;
-  position: absolute;
-  left: 260px;
-  top: 25px;
-  color: $primary-color;
-}
+// .burger {
+//   border: 1px solid red;
+//   height: 60px;
+//   display: flex;
+//   font-size: 40px;
+//   position: absolute;
+//   left: 260px;
+//   top: 25px;
+//   color: $primary-color;
+// }
 
 .profile-info-container {
   // border: 1px solid black;
@@ -42,13 +45,6 @@ $primary-color: #bfc3ba;
   align-items: center;
   width: 150px;
   padding: 10px;
-  object {
-    width: 70px;
-    height: auto;
-    color: $primary-color;
-    border: 1px solid black;
-    border-radius: 25px;
-  }
   img {
     width: 50px;
     height: auto;
@@ -62,24 +58,12 @@ $primary-color: #bfc3ba;
   display: flex;
   justify-content: space-evenly;
   width: 300px;
-  // border: 1px solid violet;
-  // a {
-  //   text-decoration: none;
-  //   color: $primary-color;
-  //   :hover {
-  //     color: #a63446;
-  //   }
-  // }
-
 }
 
 .logout {
     cursor: url(`C:\Users\kolip\Downloads\fountain-pen.png`), pointer;
-    color: #a63446;
-    :hover {
-      color: #000033;
-    }
-
+    
+    @include linx
 }
 
 @media (min-width: 360px) {
@@ -120,9 +104,6 @@ $primary-color: #bfc3ba;
   .profile-info-container {
     img {
       width: 60px;
-    }
-    object {
-      width: 80px;
     }
   }
 }
@@ -174,9 +155,6 @@ $primary-color: #bfc3ba;
     width: 200px;
     img {
       width: 80px;
-    }
-    object {
-      width: 100px;
     }
   }
 }
