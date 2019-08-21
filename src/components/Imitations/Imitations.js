@@ -3,6 +3,7 @@ import "./Imitations.scss";
 import axios from "axios";
 // import {Link} from 'react-router-dom'
 import Quill2 from '../Quill2'
+import Swal from 'sweetalert2'
 
 export default class Imitations extends Component {
   constructor(props) {
@@ -26,11 +27,26 @@ export default class Imitations extends Component {
   }
 
   deleteImitation(completed_imitation_id) {
-    axios.delete(`/api/imitations/${completed_imitation_id}`)
-    .then(res => {
-      this.setState({
-        allImitations: res.data
-      })
+    Swal.fire({
+      title: 'Are you sure about this?',
+      text: `Once it's gone, it's gone!`,
+      type: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Delete it, baby!'
+    }).then((result) => { console.log(result)
+      if (result.value) { 
+        axios.delete(`/api/imitations/${completed_imitation_id}`)
+        .then(async res => {
+         await this.setState({
+            allImitations: res.data
+          })
+          Swal.fire(
+            'Deleted!',
+            `Your imitation's gone for good.`,
+            'success'
+          )
+        })
+      }
     })
   }
 
@@ -85,7 +101,7 @@ export default class Imitations extends Component {
          
           <div className='imitations-buttons'>
             {/* <Link to='/imitation/:imitationid'> */}
-              <button onClick={() => this.updateImitation(completed_imitation_id)}>Update</button>
+              {/* <button onClick={() => this.updateImitation(completed_imitation_id)}>Update</button> */}
             {/* </Link> */}
             <button onClick={() => this.deleteImitation(completed_imitation_id)}>Delete</button>
           </div>
