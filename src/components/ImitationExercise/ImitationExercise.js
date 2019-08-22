@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import "./ImitationExercise.scss";
 import axios from "axios";
-import {connect} from 'react-redux'
-import {withRouter} from 'react-router-dom'
-import Quill from '../Quill'
-
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import Quill from "../Quill";
 
 class ImitationExercise extends Component {
   state = {
@@ -30,8 +29,8 @@ class ImitationExercise extends Component {
     this.setState({
       [key]: e
     });
-    console.log(this.state.userInput);
-  }
+    // console.log(this.state.userInput);
+  };
 
   getNewExcerpt = () => {
     axios.get("/api/excerpts/new-excerpt").then(res => {
@@ -42,47 +41,47 @@ class ImitationExercise extends Component {
   };
 
   saveImitation = () => {
-    const {userInput: completed_imitation_text} = this.state
-    const {user_id} = this.props
-    const {excerpt_id} = this.state.randomExcerpt
-    axios.post('/api/imitations', {completed_imitation_text, user_id, excerpt_id})
-         .then(res => {
-           this.props.history.push('/imitations')
-         })
-  }
+    const { userInput: completed_imitation_text } = this.state;
+    const { user_id } = this.props;
+    const { excerpt_id } = this.state.randomExcerpt;
+    axios
+      .post("/api/imitations", {
+        completed_imitation_text,
+        user_id,
+        excerpt_id
+      })
+      .then(res => {
+        this.props.history.push("/imitations");
+      });
+  };
 
   render() {
     // console.log(this.state)
     return (
       <div className="imitation-exercise">
-        <div className='page-contents'>
-        <header>
+        {/* <div className='page-contents'> */}
+        <header className="imitation-exercise-header">
           <h1>Imitate</h1>
         </header>
-          <div className="image-container">
-            <img
-              src={this.state.randomExcerpt.excerpt_image}
-              alt="author-pic"
-            />
-          </div>
+        <div className="image-container">
+          <img src={this.state.randomExcerpt.excerpt_image} alt="author-pic" />
+        </div>
+        <div className='exercise-container'>
           <div className="excerpt-container">
-            <div>
+            <div className="exercise-excerpt">
               <p>{this.state.randomExcerpt.excerpt_text}</p>
+              <br/>
               <p>{this.state.randomExcerpt.excerpt_author}</p>
+              <br/>
               <p>{this.state.randomExcerpt.excerpt_narrative}</p>
             </div>
-          </div>
-          <div className="imitation-container">
-            {/* <textarea
-              onChange={e => this.handleChange(e, "userInput")}
-              rows="6"
-              cols="30"
-            /> */}
-             <Quill handleChange={this.handleChange} />
-          </div>
-          <div className="button-container">
-            <button onClick={this.getNewExcerpt}>New Excerpt</button>
-            <button onClick={this.saveImitation}>Save Imitation</button>
+            <div className="imitation-container">
+              <Quill handleChange={this.handleChange} />
+            </div>
+            <div className="exercise-buttons">
+              <button onClick={this.getNewExcerpt}>New Excerpt</button>
+              <button onClick={this.saveImitation}>Save Imitation</button>
+            </div>
           </div>
         </div>
       </div>
@@ -91,8 +90,8 @@ class ImitationExercise extends Component {
 }
 
 function mapStateToProps(reduxState) {
-  const {user_id} = reduxState
-  return {user_id}
+  const { user_id } = reduxState;
+  return { user_id };
 }
 
-export default connect(mapStateToProps)(withRouter(ImitationExercise))
+export default connect(mapStateToProps)(withRouter(ImitationExercise));

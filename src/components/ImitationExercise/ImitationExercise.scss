@@ -6,32 +6,50 @@ $primary-color: #BFC3BA;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     // border: 1px solid yellow;
     color: $primary-color;
+}
+
+.imitation-exercise-header {
+    // border: 1px solid orange;
+    margin-top: 160px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.exercise-container {
+    // border: 3px solid burlywood;
+    height: 100%;
+    // overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .excerpt-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
     // border: 1px solid red;
-    width: 100%;
-    height: 40%;
+    width: 90%;
+    height: 100%;
     font-size: 9px;
-    position: relative;
+    overflow: auto;
 }
 
-// .text-container {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: space-evenly;
-//     width: 40%;
-//     border: 1px solid red;
-
-// }
+.exercise-excerpt {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    // border: 2px solid green;
+    height: 100%;
+    padding: 10px
+}
 
 .image-container{
     display: none;
@@ -45,28 +63,24 @@ $primary-color: #BFC3BA;
 }
 
 .imitation-container {
-    height: 20%;
+    // height: 100%;
     // border: 1px solid blue;
+    margin-top: 10px;
 }
 
-.page-contents {
-    // border: 1px solid pink;
+
+.exercise-buttons {
+    // border: 1px solid black;
+    width: 190px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 75%;
-    width: 95%;
-    // position: relative;
-    header {
-        font-size: 14px;
-        height: 5%;
-        
+    justify-content: space-evenly;
+    button {
+        border-radius: 20px;
+        background-color: #0c6291;
+        width: 60px;
+        height: 40px;
+        color: $primary-color;
     }
-}
-
-.button-container {
-    // border: 1px solid green;
-    position: relative;
-    bottom: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

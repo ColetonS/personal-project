@@ -5,14 +5,14 @@ $primary-color: #BFC3BA;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    // border: 1px solid red;
+    border: 1px solid red;
     height: 100%;
     width: 100%;
     color: $primary-color;
 }
 
 .imitations-header {
-    // border: 1px solid green;
+    border: 1px solid green;
     margin-top: 160px;
     margin-bottom: 10px;
     font-size: 14px;
@@ -23,7 +23,7 @@ $primary-color: #BFC3BA;
     flex-direction: column;
     justify-content: flex-start;
     align-content: center;
-    // border: 1px solid blue;
+    border: 1px solid blue;
     height: 100%;
     width: 90%;
     font-size: 9px;
@@ -31,7 +31,7 @@ $primary-color: #BFC3BA;
 
 }
 .imitation {
-    // border: 1px solid black;
+    border: 1px solid black;
     // overflow: auto;
     height: 200x;
     // width: 2000px;
