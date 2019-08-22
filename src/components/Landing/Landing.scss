@@ -51,6 +51,13 @@ $primary-color: #bfc3ba;
     height: 40px;
     color: $primary-color;
     outline: none;
+    box-shadow: -2px 4px #999;
+    cursor: pointer;
+  }
+  :hover {background: #A63446}
+  :active {
+    background: #7E1946;
+    box-shadow: -1px 3px #666;
   }
 }
 

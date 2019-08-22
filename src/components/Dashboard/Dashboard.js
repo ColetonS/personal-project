@@ -6,22 +6,21 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard">
-        
-        <div className='dash-main'>
-          <header>
-            <h1>Write On</h1>
-          </header>
+        <header className="dash-head">
+          <h1>Write On</h1>
+        </header>
+        <div className="dash-main">
           <div className="dash-buttons">
             <Link to="/imitation-exercise">
               <button>Imitate</button>
             </Link>
           </div>
-          <footer>
-            <Link to='/email'>
-              <h5>Contact</h5>
-            </Link>
-          </footer>
         </div>
+        <footer className="dash-foot">
+          <Link to="/email">
+            <h4>Contact</h4>
+          </Link>
+        </footer>
       </div>
     );
   }
