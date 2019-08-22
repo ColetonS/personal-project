@@ -47,10 +47,11 @@ $primary-color: #bfc3ba;
   padding: 10px;
   img {
     width: 50px;
-    height: auto;
+    height: 55px;
     color: $primary-color;
     border: 1px solid black;
     border-radius: 25px;
+    object-fit: cover;
   }
 }
 
@@ -61,7 +62,7 @@ $primary-color: #bfc3ba;
 }
 
 .logout {
-    cursor: url(`C:\Users\kolip\Downloads\fountain-pen.png`), pointer;
+    cursor: pointer;
     
     @include linx
 }

@@ -46,8 +46,8 @@ $primary-color: #bfc3ba;
   display: flex;
   justify-content: center;
   align-items: center;
-//   flex-direction: column;
-//   border: 2px solid green;
+  //   flex-direction: column;
+  //   border: 2px solid green;
   height: 100%;
   padding-top: 10px;
 }
@@ -57,12 +57,11 @@ $primary-color: #bfc3ba;
 }
 
 .exercise-image {
-    object-fit: cover;
-    width: 150px;
-    height: 200px;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding-right: 5px;
+  object-fit: cover;
+  width: 150px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 
 .imitation-quill-container {
@@ -124,6 +123,17 @@ $primary-color: #bfc3ba;
     font-size: 17px;
   }
 }
+@media (min-width: 768px) {
+  .exercise-buttons {
+    width: 250px;
+    button {
+      border-radius: 30px;
+      width: 80px;
+      height: 60px;
+      font-size: 16px;
+    }
+  }
+}
 @media (min-width: 1000px) {
   .excerpt-container {
     font-size: 13px;
@@ -135,8 +145,12 @@ $primary-color: #bfc3ba;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     font-size: 12px;
     height: 275px;
+    margin-left: 8px;
+    padding: 5px;
+    // border: 1px solid red;
   }
 }
 @media (min-width: 1100px) {
