@@ -9,12 +9,14 @@ $primary-color: #BFC3BA;
     height: 100%;
     width: 100%;
     color: $primary-color;
-    header {
-        // border: 1px solid green;
-        margin-top: 160px;
-        margin-bottom: 10px
-    }
 }
+
+.imitations-header {
+    // border: 1px solid green;
+    margin-top: 160px;
+    margin-bottom: 10px
+}
+
 .imitations-container {
     display: flex;
     flex-direction: column;
@@ -28,7 +30,7 @@ $primary-color: #BFC3BA;
 
 }
 .imitation {
-    // border: 1px solid black;
+    border: 1px solid black;
     // overflow: auto;
     height: 200x;
     // width: 2000px;
@@ -40,6 +42,10 @@ $primary-color: #BFC3BA;
 
 .img-class {
     display: none;
+    width: 150px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 
 .imitations-buttons {
@@ -58,11 +64,8 @@ padding-top: 10px;
 .excerpt {
     padding-bottom: 20px;
     padding-top: 10px;
-}
-
-.quill-container {
-    // height: 300px;
-   
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .quill {
@@ -72,4 +75,32 @@ padding-top: 10px;
     flex-direction: column;
     align-content: center;
     // border: 2px solid purple;
+}
+
+@media (min-width: 360px) {
+    .imitations-container {
+        font-size: 10px;
+
+    }
+}
+@media (min-width: 460px) {
+    .imitations-container {
+        font-size: 11px;
+
+    }
+}
+@media (min-width: 560px) {
+    .imitations-container {
+        font-size: 12;
+
+    }
+}
+@media (min-width: 1000px) {
+    .imitations-container {
+        font-size: 13;
+
+        .img-class {
+            display: inline;
+        }
+    }
 }

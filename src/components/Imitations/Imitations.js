@@ -84,14 +84,12 @@ export default class Imitations extends Component {
       const excerptText = excerpt_text;
       return (
         <div className="imitation" key={completed_imitation_id}>
-          <div className='excerpt'>
+          <div className="excerpt">
             <p>{excerptText}</p>
-          </div>
-          <div>
             <img className="img-class" src={excerpt_image} alt="author-pic" />
           </div>
-          <div className='quill-container'>
-            <div className='quill'>
+          <div className="quill-container">
+            <div className="quill">
               <Quill2
                 onChange={this.handleChange}
                 imitationText={imitationText}
@@ -116,7 +114,7 @@ export default class Imitations extends Component {
 
     return (
       <div className="main-imitations-container">
-        <header>
+        <header className="imitations-header">
           <h1>My Imitations</h1>
         </header>
         <div className="imitations-container">{mappedImitations}</div>
