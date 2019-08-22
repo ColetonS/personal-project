@@ -1,123 +1,129 @@
-$primary-color: #BFC3BA;
+$primary-color: #bfc3ba;
 
 .main-imitations-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid red;
-    height: 100%;
-    width: 100%;
-    color: $primary-color;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  // border: 1px solid red;
+  height: 100%;
+  width: 100%;
+  color: $primary-color;
 }
 
 .imitations-header {
-    border: 1px solid green;
-    margin-top: 160px;
-    margin-bottom: 10px;
-    font-size: 14px;
+  // border: 1px solid green;
+  margin-top: 160px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .imitations-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
-    border: 1px solid blue;
-    height: 100%;
-    width: 90%;
-    font-size: 9px;
-    overflow: auto;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  // border: 1px solid blue;
+  height: 100%;
+  width: 90%;
+  font-size: 9px;
+  overflow: auto;
 }
 .imitation {
-    border: 1px solid black;
-    // overflow: auto;
-    height: 200x;
-    // width: 2000px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 10px;
+  border: 1px solid black;
+  // overflow: auto;
+  // height: 200x;
+  // width: 2000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
 }
 
+.author-container {
+  display: none;
+}
 .img-class {
-    display: none;
-    object-fit: cover;
-    width: 150px;
-    height: 200px;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding-right: 5px;
+  object-fit: cover;
+  width: 150px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding-right: 5px;
 }
 
 .imitations-buttons {
-    display: flex;
-    justify-content: space-evenly;
-    button {
+  display: flex;
+  justify-content: space-evenly;
+  button {
     border-radius: 20px;
     background-color: #0c6291;
     width: 60px;
     height: 40px;
     color: $primary-color;
-}
-padding-top: 10px;
+    outline: none;
+  }
+  padding-top: 10px;
 }
 
 .excerpt {
-    padding-bottom: 20px;
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-evenly;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .quill {
-    height: 300px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-content: center;
-    // border: 2px solid purple;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-content: center;
+  // border: 2px solid purple;
 }
 
 @media (min-width: 360px) {
-    .imitations-container {
-        font-size: 10px;
-
-    }
-    .imitations-header {
-        font-size: 15px;
-    }
+  .imitations-container {
+    font-size: 10px;
+  }
+  .imitations-header {
+    font-size: 15px;
+  }
 }
 @media (min-width: 460px) {
-    .imitations-container {
-        font-size: 11px;
-    }
-    .imitations-header {
-        font-size: 16px;
-    }
+  .imitations-container {
+    font-size: 11px;
+  }
+  .imitations-header {
+    font-size: 16px;
+  }
 }
 @media (min-width: 560px) {
-    .imitations-container {
-        font-size: 12px;
-    }
-    .imitations-header {
-        font-size: 17px;
-    }
+  .imitations-container {
+    font-size: 12px;
+  }
+  .imitations-header {
+    font-size: 17px;
+  }
 }
 @media (min-width: 1000px) {
-    .imitations-container {
-        font-size: 13px;
-        .img-class {
-            display: inline;
-        }
-    }
-    .imitations-header {
-        font-size: 18px;
-    }
+  .imitations-container {
+    font-size: 13px;
+  }
+  .author-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 12px;
+    height: 275px;
+    // border: 1px solid red;
+  }
+  .imitations-header {
+    font-size: 18px;
+  }
 }
 @media (min-width: 1100px) {
-    .imitations-container {
-        font-size: 19px;
-    }
+  .imitations-container {
+    font-size: 19px;
+  }
 }

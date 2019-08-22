@@ -86,7 +86,11 @@ export default class Imitations extends Component {
         <div className="imitation" key={completed_imitation_id}>
           <div className="excerpt">
             <p>{excerptText}</p>
-            <img className="img-class" src={excerpt_image} alt="author-pic" />
+            <div className="author-container">
+              <img className="img-class" src={excerpt_image} alt="author-pic" />
+              <p>{excerpt_author}</p>
+              <p>{excerpt_narrative}</p>
+            </div>
           </div>
           <div className="quill-container">
             <div className="quill">

@@ -63,20 +63,24 @@ class ImitationExercise extends Component {
         <header className="imitation-exercise-header">
           <h1>Imitate</h1>
         </header>
-        <div className="image-container">
-          <img src={this.state.randomExcerpt.excerpt_image} alt="author-pic" />
-        </div>
-        <div className='exercise-container'>
+        <div className="exercise-container">
           <div className="excerpt-container">
             <div className="exercise-excerpt">
               <p>{this.state.randomExcerpt.excerpt_text}</p>
-              <br/>
-              <p>{this.state.randomExcerpt.excerpt_author}</p>
-              <br/>
-              <p>{this.state.randomExcerpt.excerpt_narrative}</p>
+              <div className='exercise-author-container'>
+                <img
+                  className="exercise-image"
+                  src={this.state.randomExcerpt.excerpt_image}
+                  alt="author-pic"
+                />
+                <p>{this.state.randomExcerpt.excerpt_author}</p>
+                <p>{this.state.randomExcerpt.excerpt_narrative}</p>
+              </div>
             </div>
-            <div className="imitation-container">
-              <Quill handleChange={this.handleChange} />
+            <div className="imitation-quill-container">
+              <div className="imitation-quill">
+                <Quill handleChange={this.handleChange} />
+              </div>
             </div>
             <div className="exercise-buttons">
               <button onClick={this.getNewExcerpt}>New Excerpt</button>

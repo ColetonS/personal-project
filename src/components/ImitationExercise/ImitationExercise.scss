@@ -1,86 +1,146 @@
-$primary-color: #BFC3BA;
+$primary-color: #bfc3ba;
 
 .imitation-exercise {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    // border: 1px solid yellow;
-    color: $primary-color;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  // border: 1px solid yellow;
+  color: $primary-color;
 }
 
 .imitation-exercise-header {
-    // border: 1px solid orange;
-    margin-top: 160px;
-    margin-bottom: 10px;
-    font-size: 14px;
+  // border: 1px solid orange;
+  margin-top: 160px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .exercise-container {
-    // border: 3px solid burlywood;
-    height: 100%;
-    // overflow: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  border: 1px solid black;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10px;
 }
 
 .excerpt-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    // border: 1px solid red;
-    width: 90%;
-    height: 100%;
-    font-size: 9px;
-    overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  // border: 1px solid red;
+  width: 90%;
+  height: 100%;
+  font-size: 9px;
+  overflow: auto;
 }
 
 .exercise-excerpt {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    // border: 2px solid green;
-    height: 100%;
-    padding: 10px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+//   flex-direction: column;
+//   border: 2px solid green;
+  height: 100%;
+  padding-top: 10px;
 }
 
-.image-container{
-    display: none;
-    // border: 1px solid purple;
-    width: 20%;
-    height: 30%;
-    img {
-        height: 100px;
-        width: auto;
-    }
+.exercise-author-container {
+  display: none;
 }
 
-.imitation-container {
-    // height: 100%;
-    // border: 1px solid blue;
-    margin-top: 10px;
+.exercise-image {
+    object-fit: cover;
+    width: 150px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-right: 5px;
 }
 
+.imitation-quill-container {
+  width: 100%;
+  height: 100%;
+}
+
+.imitation-quill {
+  height: 300px;
+  width: 100%;
+  // border: 1px solid blue;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-content: center;
+}
 
 .exercise-buttons {
-    // border: 1px solid black;
-    width: 190px;
+  // border: 1px solid black;
+  width: 190px;
+  display: flex;
+  justify-content: space-evenly;
+  button {
+    border-radius: 20px;
+    background-color: #0c6291;
+    width: 60px;
+    height: 40px;
+    color: $primary-color;
+    text-decoration: none;
+    outline: none;
+  }
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 360px) {
+  .excerpt-container {
+    font-size: 10px;
+  }
+  .imitation-exercise-header {
+    font-size: 15px;
+  }
+}
+@media (min-width: 460px) {
+  .excerpt-container {
+    font-size: 11px;
+  }
+  .imitation-exercise-header {
+    font-size: 16px;
+  }
+}
+@media (min-width: 560px) {
+  .excerpt-container {
+    font-size: 12px;
+  }
+  .imitation-exercise-header {
+    font-size: 17px;
+  }
+}
+@media (min-width: 1000px) {
+  .excerpt-container {
+    font-size: 13px;
+  }
+  .imitation-exercise-header {
+    font-size: 18px;
+  }
+  .exercise-author-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    button {
-        border-radius: 20px;
-        background-color: #0c6291;
-        width: 60px;
-        height: 40px;
-        color: $primary-color;
-    }
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: 12px;
+    height: 275px;
+  }
+}
+@media (min-width: 1100px) {
+  .excerpt-container {
+    font-size: 19px;
+  }
 }
