@@ -19,6 +19,7 @@ $primary-color: #bfc3ba;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  font-size: 14px;
 //   border: 1px solid green;
 }
 .email-inputs {
@@ -57,4 +58,31 @@ $primary-color: #bfc3ba;
     background: #7E1946;
     box-shadow: -1px 3px #666;
   }
+}
+@media (min-width: 500px) {
+    .email-main {
+        justify-content: space-evenly;
+    }
+    .email-header {
+        font-size: 15px;
+    }
+}
+@media (min-width: 700px) {
+    .header-and-input-container {
+        height: 500px;
+    }
+    .email-header {
+        font-size: 16px;
+    }
+}
+@media (min-height: 640px) {
+    .email-main {
+        justify-content: space-evenly;
+    }
+    .header-and-input-container {
+        height: 400px;
+    }
+    .email-header {
+        font-size: 17px;
+    }
 }
