@@ -7,10 +7,6 @@ import { Link } from "react-router-dom";
 import "./Nav.scss";
 
 class Nav extends Component {
-  // state = {
-  //   showMenu: false,
-  //   showImage: false
-  // };
 
   logout = () => {
     axios.delete("/api/auth/logout").then(() => {
@@ -19,23 +15,11 @@ class Nav extends Component {
     });
   };
 
-  // toggleMenu = () => {
-  //   this.setState({
-  //     showMenu: !this.state.showMenu,
-  //     showImage: !this.state.showImage
-  //   });
-  // };
-
   render() {
-    // console.log(this.session)
     return (
       <div>
-        {/* <div className="burger" onClick={this.toggleMenu}>
-          &#9776;
-        </div> */}
         <div
           className="nav"
-          // style={{ display: this.state.showMenu ? null : "none" }}
         >
           <div className="profile-info-container">
             {this.props.user_image ? (
