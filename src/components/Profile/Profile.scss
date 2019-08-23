@@ -9,28 +9,36 @@
 }
 
 .profile-header {
-    border: 1px solid orange;
+    // border: 1px solid orange;
     // height: 100px;
     // width: 250px;
     display: flex;
     // flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .edit-image {
-    border: 1px solid blue;
     height: 100px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border: 1px solid black;
+    // border: 1px solid black;
 }
 .profile-image {
     object-fit: cover;
-    width: 150px;
-    height: 100px;
+    width: 100px;
+    height: 50px;
     border-radius: 45px;
-    border: 1px solid black;
+    // border: 1px solid black;
+}
+.edit-name {
+    // border: 1px solid blue;
+    height: 100px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }

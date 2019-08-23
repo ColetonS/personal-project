@@ -6,7 +6,8 @@ import axios from "axios";
 
 class Profile extends Component {
   state = {
-    imageInput: ""
+    imageInput: "",
+    nameInput: ''
   };
 
   handleChange(e, key) {
@@ -14,15 +15,6 @@ class Profile extends Component {
       [key]: e.target.value
     });
   }
-
-  // componentDidUpdate(prevProps, prevState) {
-  //     console.log(prevProps, prevState)
-  //     if (prevProps !== this.props) {
-  //         this.setState({
-  //             imageInput: ''
-  //         })
-  //     }
-  // }
 
   updateUser = user_id => {
     const { imageInput: user_image } = this.state;
@@ -40,11 +32,27 @@ class Profile extends Component {
     });
   };
 
+  updateUsername = user_id => {
+    const { nameInput: username } = this.state
+    axios
+      .put(`/api/users/username/${user_id}`, { username })
+      .then(res => {
+        const { user_id, user_image, username } = res.data[0]
+        this.props.setUser({ user_id, user_image, username })
+      })
+      .catch(() => {
+        alert(`Here's an error for you.`)
+      })
+      this.setState({
+        nameInput: ''
+      })
+  }
+
   render() {
     return (
       <div className="profile-container">
         <header className="profile-header">
-          <h3>Update Profile Image</h3>
+          <h1>Profile</h1>
         </header>
         <div>
           {this.props.user_image ? (
@@ -61,8 +69,11 @@ class Profile extends Component {
             />
           )}
         </div>
+        <div>
+            <h2>{this.props.username}</h2>
+        </div>
         <div className="edit-image">
-          <p>Enter the image URL here</p>
+          <p>Update Profile Image</p>
           <input
             value={this.state.imageInput}
             onChange={e => this.handleChange(e, "imageInput")}
@@ -72,6 +83,15 @@ class Profile extends Component {
             Submit
           </button>
         </div>
+          <div className="edit-name">
+              <p>Edit Username</p>
+              <input
+                value={this.state.nameInput}
+                onChange={e => this.handleChange(e, 'nameInput')}
+                type='text'
+              />
+              <button onClick={() => this.updateUsername(this.props.user_id)}>Submit</button>
+          </div>
       </div>
     );
   }

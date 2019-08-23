@@ -39,4 +39,5 @@ app.delete('/api/imitations/:completed_imitation_id', imitationsCtrl.deleteImita
 app.post('/api/imitations', imitationsCtrl.addImitation)
 app.put('/api/imitations/:completed_imitation_id', imitationsCtrl.updateImitation)
 app.put('/api/users/:user_id', updateUserCtrl.updateUser)
+app.put('/api/users/username/:user_id', updateUserCtrl.updateUsername)
 app.post('/api/email', nodeMailerCtrl.email)
