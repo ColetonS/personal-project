@@ -41,6 +41,9 @@ $primary-color: #bfc3ba;
   font-size: 10px;
   //   border: 1px solid white;
 }
+.edit-container {
+    // border: 1px solid yellow;
+}
 .edit-image {
   height: 110px;
   width: 250px;
@@ -55,9 +58,9 @@ $primary-color: #bfc3ba;
   }
 }
 
-.profile-image-container {
-  // border: 1px solid purple;
-}
+// .profile-image-container {
+//   border: 1px solid purple;
+// }
 .profile-image {
   object-fit: cover;
   width: 150px;
@@ -89,6 +92,23 @@ $primary-color: #bfc3ba;
     box-shadow: -1px 3px #666;
   }
 }
+// min-height
+@media (min-height: 800px) {
+    .profile-container {
+        height: 500px;
+    }
+    .img-and-name-container {
+        height: 200px;
+    }
+    .profile-image {
+        width: 190px;
+        height: 130px;
+        border-radius: 75px;
+      }
+    
+}
+
+// min-width
 @media (min-width: 400px) {
   .profile-container {
     height: 420px;

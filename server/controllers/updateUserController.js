@@ -5,8 +5,9 @@ module.exports = {
             const {user_image} = req.body
             const {user_id} = req.params
             const {username} = req.session.user
-            // console.log(req.session)
+            console.log(req.session)
             const updatedUser = await db.update_user({user_image, user_id, username})
+            req.session.user.user_image = user_image
             res.status(200).send(updatedUser)
         }
         catch(err) {
@@ -24,6 +25,7 @@ module.exports = {
                 return res.status(409).send({message: 'Username in use'})
             }
             const updatedUsername = await db.update_user({username,user_id, user_image})
+            req.session.user.username = username
             res.status(200).send(updatedUsername)
         }
         catch(err) {
