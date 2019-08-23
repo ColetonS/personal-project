@@ -38,7 +38,6 @@ class Profile extends Component {
     axios
       .put(`/api/users/username/${user_id}`, { username })
       .then(res => {
-        console.log(res.data)
         const { user_id, user_image, username } = res.data[0];
         this.props.setUser({ user_id, user_image, username });
       })
