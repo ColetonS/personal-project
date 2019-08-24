@@ -1,10 +1,10 @@
 $primary-color: #bfc3ba;
 $red: #f45e61;
 
-
 @mixin linx {
   color: #a63446;
   text-decoration: none;
+  transition: 2s;
   :hover {
     color: #000033;
   }
@@ -33,7 +33,7 @@ $red: #f45e61;
 .dash-head {
   margin-top: 80px;
   h1 {
-    background-image: url('https://media0.giphy.com/media/3bc8pP1rVdfgN1uoMV/giphy.gif?cid=790b7611c1427c8b68985c4163094a837b1a7e3f5ef95235&rid=giphy.gif');
+    background-image: url("https://media0.giphy.com/media/3bc8pP1rVdfgN1uoMV/giphy.gif?cid=790b7611c1427c8b68985c4163094a837b1a7e3f5ef95235&rid=giphy.gif");
     background-size: cover;
     color: transparent;
     background-clip: text;
@@ -61,72 +61,25 @@ $red: #f45e61;
   button {
     // isolation: isolate;
     background: none;
-    border: 0;
+    border: 0 $primary-color;
     border-radius: 80px;
     width: 100px;
     height: 75px;
     // margin: 1em;
     // padding: 1em 2em;
-    color: #0C6291;
+    color: #0c6291;
     outline: none;
     font-size: 16px;
     // font-weight: 600;
     box-shadow: inset 0 0 0 2px $primary-color;
     cursor: pointer;
-    // position: relative;
-    // vertical-align: middle;
-
-    // &::before,
-    // &::after {
-    //   box-sizing: inherit;
-    //   content: '';
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 100%;
-    // }
-
-    &:hover {
-      color: #fff;
-      font-weight: 700;
-    }
-
-    // &::before {
-    //   border: 2.5em solid transparent;
-    //   z-index: -1;
-    // }
-
-    // &::after {
-    //   mix-blend-mode: color-dodge;
-    //   z-index: -1;
-    // }
-
-    // &:hover::before {
-    //   background: $red;
-    //   border-top-color: $red;
-    //   border-right-color: $red;
-    //   border-bottom-color: $red;
-    //   transition:
-    //     background 0s linear 0.4s,
-    //     border-top-color 0.15s linear,
-    //     border-right-color 0.15s linear 0.15s,
-    //     border-bottom-color 0.15s linear 0.25s;
-    // }
-
-    // &:hover::after {
-    //   border-top: 2.5em solid $red;
-    //   border-left-width: 2.5em;
-    //   border-right-width: 2.5em;
-    // }
-
+    transition: 0.30s;
   }
-  // button:hover {
-  //   background: #0c6291;
-  // }
-  // button:active {
-  //   background: #c7efcf;
-  //   box-shadow: -1px 3px #666;
-  //   color: #3a2d32;
-  // }
+  button:hover {
+    color: #fff;
+    font-weight: 600;
+    border: 2px solid #0c6291;
+  }
 }
 
 @media (min-width: 500px) {
@@ -148,7 +101,6 @@ $red: #f45e61;
     //   box-shadow: -2px 4px #666;
     //   color: #3a2d32;
     // }
-    
   }
 }
 @media (min-width: 575px) {
@@ -179,6 +131,5 @@ $red: #f45e61;
     //   box-shadow: -3px 5px #666;
     //   color: #3a2d32;
     // }
-    
   }
 }

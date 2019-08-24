@@ -44,21 +44,17 @@ $primary-color: #bfc3ba;
 
 .buttons {
   button {
-    background-color: #0c6291;
-    border: none;
+    background: none;
+    border: inset $primary-color;
     border-radius: 20px;
     width: 60px;
     height: 40px;
     color: $primary-color;
-    outline: none;
-    box-shadow: -2px 4px #999;
+    // outline: inset;
     cursor: pointer;
+    transition: 0.85s;
   }
-  :hover {background: #A63446}
-  :active {
-    background: #7E1946;
-    box-shadow: -1px 3px #666;
-  }
+  :hover {background: #0C6291}
 }
 
 .logo {

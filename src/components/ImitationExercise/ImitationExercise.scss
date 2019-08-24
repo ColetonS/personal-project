@@ -87,14 +87,17 @@ $primary-color: #bfc3ba;
   display: flex;
   justify-content: space-evenly;
   button {
+    position: relative;
+    border: 2px solid #0c6291;
     border-radius: 20px;
-    background-color: #0c6291;
-    width: 60px;
-    height: 40px;
+    background: none;
+    width: 65px;
+    height: 45px;
     color: $primary-color;
-    text-decoration: none;
+    // text-decoration: none;
     outline: none;
-    border: none;
+    transition: 0.75s;
+    cursor: pointer;
   }
   margin-top: 10px;
   margin-bottom: 10px;

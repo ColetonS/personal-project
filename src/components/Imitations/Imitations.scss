@@ -30,14 +30,13 @@ $primary-color: #bfc3ba;
   overflow: auto;
 }
 .imitation {
-  border: 1px solid black;
-  // overflow: auto;
-  // height: 200x;
-  // width: 2000px;
+  border: 2px solid #000033;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 10px;
+  box-shadow: inset 0 0 5px grey; 
 }
 
 .author-container {
@@ -47,9 +46,8 @@ $primary-color: #bfc3ba;
   object-fit: cover;
   width: 150px;
   height: 200px;
-    border: 1px solid black;
+  border: 1px solid black;
   border-radius: 20px;
-  padding-right: 5px;
 }
 
 .imitations-buttons {
@@ -57,12 +55,20 @@ $primary-color: #bfc3ba;
   justify-content: space-evenly;
   button {
     border-radius: 20px;
-    border: none;
-    background-color: #0c6291;
+    border: 0.5px solid #000033;
+    background: none;
     width: 60px;
     height: 40px;
     color: $primary-color;
     outline: none;
+    transition: .5s;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #BFC3BA;
+    color: #A63446;
+    font-weight: 700;
+    border: 2px solid #A63446;
   }
   padding-top: 10px;
 }
