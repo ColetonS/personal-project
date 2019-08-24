@@ -56,7 +56,6 @@ class ImitationExercise extends Component {
   };
 
   render() {
-    // console.log(this.state)
     return (
       <div className="imitation-exercise">
         {/* <div className='page-contents'> */}
