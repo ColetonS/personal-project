@@ -22,12 +22,14 @@
 
 ::-webkit-scrollbar {
   width: 20px;
-  height: 80px;
+  /* height: 80px; */
 }
+
 
 ::-webkit-scrollbar-thumb {
   background: #BFC3BA; 
   border-radius: 10px;
+  height: 150px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
