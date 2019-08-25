@@ -1,7 +1,7 @@
 $primary-color: #bfc3ba;
 
 .email-main {
-  // border: 1px solid pink;
+  border: 1px solid white;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -11,8 +11,9 @@ $primary-color: #bfc3ba;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-//   border: 1px solid red;
+  // border: 1px solid red;
   height: 450px;
+  margin-top: 150px;
 }
 .email-header {
   display: flex;
@@ -43,21 +44,26 @@ $primary-color: #bfc3ba;
   justify-content: center;
   height: 35px;
   button {
-    background-color: #0c6291;
-    border: none;
+    background: none;
+    border: .5px solid #9EB3C2;
     border-radius: 20px;
     width: 60px;
     height: 40px;
     color: $primary-color;
     outline: none;
-    box-shadow: -2px 4px #999;
+    box-shadow: inset 0 0 0 1px #9EB3C2;
     cursor: pointer;
+    transition: .75s;
   }
-  :hover {background: #A63446}
-  :active {
-    background: #7E1946;
-    box-shadow: -1px 3px #666;
+  :hover {
+    background: #1B3B6F;
+    box-shadow: inset 0 0 0 2px;
+    font-weight: 400;
+    width: 70px;
+    height: 50px;
+    border-radius: none;
   }
+
 }
 @media (min-width: 500px) {
     .email-main {
@@ -73,6 +79,11 @@ $primary-color: #bfc3ba;
     }
     .email-header {
         font-size: 16px;
+    }
+    .email-inputs {
+      input {
+        width: 50%;
+      }
     }
 }
 @media (min-height: 640px) {

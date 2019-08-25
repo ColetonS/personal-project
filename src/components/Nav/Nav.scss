@@ -5,7 +5,7 @@ $primary-color: #bfc3ba;
   text-decoration: none;
   transition: color 2s;
   :hover {
-    color: #000033;
+    color: #7F2CCB;
   }
 }
 
@@ -25,6 +25,14 @@ $primary-color: #bfc3ba;
   a {
     @include linx
   } 
+  h3 {
+    color: #C1EEFF;
+    transition: 0.5s;
+  }
+  h3:hover {
+    color: #FFA9E7;
+    font-weight: 250;
+  }
 }
 
 // .burger {
@@ -110,6 +118,9 @@ $primary-color: #bfc3ba;
   }
 }
 @media (min-width: 575px) {
+  .profile-info-container {
+    width: 170px;
+  }
   .nav {
     left: 180px;
     font-size: 14px;
@@ -128,6 +139,7 @@ $primary-color: #bfc3ba;
     left: 500px;
   }
   .profile-info-container {
+    width: 200px;
     img {
       width: 70px;
       width: 90px;

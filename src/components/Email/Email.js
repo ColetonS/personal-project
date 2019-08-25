@@ -41,7 +41,7 @@ export default class Email extends Component {
       <div className="email-main">
         <div className='header-and-input-container'>
           <div className="email-header">
-            <h1>Contact Me</h1>
+            <h1>Contact Creator</h1>
           </div>
           <div className="email-inputs">
             <input

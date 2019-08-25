@@ -47,6 +47,10 @@ $red: #f45e61;
   a {
     @include linx;
     color: #bfc3ba;
+    :hover {
+      color: #FFF07C;
+      font-size: 30px;
+    }
   }
   padding-top: 10px;
 }
@@ -71,14 +75,15 @@ $red: #f45e61;
     outline: none;
     font-size: 16px;
     // font-weight: 600;
-    box-shadow: inset 0 0 0 2px $primary-color;
+    box-shadow: inset 0 0 0 3px $primary-color;
     cursor: pointer;
     transition: 0.30s;
   }
   button:hover {
     color: #fff;
-    font-weight: 600;
+    font-weight: 400;
     border: 2px solid #0c6291;
+    box-shadow: none;
   }
 }
 
