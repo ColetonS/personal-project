@@ -37,8 +37,16 @@ $primary-color: #bfc3ba;
   justify-content: space-evenly;
   padding: 10px;
   box-shadow: inset 0 0 6px #0C6291; 
+  img {
+    opacity: 1;
+  }
+  opacity: 0.8;
+  transition: 0.5s;
 }
 
+.imitation:hover {
+  opacity: 1;
+}
 .author-container {
   display: none;
 }
