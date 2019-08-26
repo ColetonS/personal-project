@@ -25,6 +25,7 @@ export default class Quill extends Component {
         <ReactQuill value={this.state.text}
                     onChange={this.handleChange}
                     style={style.quillStyle}
+                    placeholder={this.props.placeholder}
                     />
       )
     }

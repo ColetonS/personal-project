@@ -78,7 +78,9 @@ class ImitationExercise extends Component {
             </div>
             <div className="imitation-quill-container">
               <div className="imitation-quill">
-                <Quill handleChange={this.handleChange} />
+                <Quill handleChange={this.handleChange}
+                       placeholder={`Write a paragraph or more that imitates the style (diction, syntax, etc.) of the above excerpt. (If you're feeling nervous, first copy the excerpt word for word. This will give you a better feel of the author's voice.)`}
+                />
               </div>
             </div>
             <div className="exercise-buttons">
