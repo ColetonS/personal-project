@@ -4,7 +4,7 @@ import 'react-quill/dist/quill.snow.css';
 
 const style = {
     quillStyle: {
-        height: '100%'
+        height: '100%',
     }
 }
 

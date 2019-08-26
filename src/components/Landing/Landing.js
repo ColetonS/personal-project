@@ -3,7 +3,7 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { setUser } from "../../ducks/reducer";
 import "./Landing.scss";
-
+import Swal from 'sweetalert2'
 
 class Landing extends Component {
   state = {
@@ -34,13 +34,18 @@ class Landing extends Component {
 
   loginUser = () => {
     const { usernameInput: username, passwordInput: password } = this.state;
-    axios.post("/api/auth/login", { username, password }).then(res => {
+    axios
+    .post("/api/auth/login", { username, password })
+    .then(res => {
       // console.log(res.data.user)
       const { user_id, username, user_image } = res.data.user;
       // console.log({user_id, username, user_image})
       this.props.setUser({ user_id, username, user_image });
       this.props.history.push("/dashboard");
-    });
+    })
+    .catch(() => {
+      alert('Incorrect username and/or password.')
+    })
   };
 
   render() {
@@ -66,7 +71,7 @@ class Landing extends Component {
               type="password"
             />
           </div>
-          <div className='buttons'>
+          <div className="buttons">
             <button onClick={this.loginUser}>Login</button>
             <button onClick={this.registerUser}>Register</button>
           </div>

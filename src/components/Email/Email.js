@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Email.scss";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 export default class Email extends Component {
   constructor() {
@@ -24,16 +25,15 @@ export default class Email extends Component {
     const { name, email, message, title, image } = this.state;
     axios
       .post("/api/email", { name, email, message, title, image })
-      .then(res => {
-        this.setState({
-          name: "",
-          email: "",
-          title: "",
-          message: "",
-          image: ""
-        });
-      });
-  };
+      this.setState({
+        name: "",
+        email: "",
+        title: "",
+        message: "",
+        image: ""
+      })
+      Swal.fire("Message sent!", `The developer will respond ASAP.`, "success");
+    };
 
   render() {
     const { name, email, message, title, image } = this.state;

@@ -33,7 +33,6 @@ export default class Imitations extends Component {
       showCancelButton: true,
       confirmButtonText: "Delete it, baby!"
     }).then(result => {
-      console.log(result);
       if (result.value) {
         axios
           .delete(`/api/imitations/${completed_imitation_id}`)

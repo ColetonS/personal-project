@@ -26,7 +26,7 @@ module.exports = {
 
       const info = await transporter.sendMail(
         {
-          from: `'${name}' <${email}>`,
+          from: `'${name}' ${email}`,
           to: EMAIL,
           subject: title,
           text: message,
