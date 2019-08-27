@@ -66,9 +66,9 @@ $red: #f45e61;
     // isolation: isolate;
     background: none;
     border: .5px solid $primary-color;
-    border-radius: 80px;
-    width: 100px;
-    height: 75px;
+    border-radius: 70px;
+    width: 90px;
+    height: 65px;
     // margin: 1em;
     // padding: 1em 2em;
     color: #0c6291;
@@ -83,7 +83,7 @@ $red: #f45e61;
     color: #fff;
     font-weight: 400;
     border: 2px solid #0c6291;
-    box-shadow: inset 0 0 6px #0c6291;
+    box-shadow: inset 0 0 7px #0c6291;
   }
 }
 
@@ -97,22 +97,30 @@ $red: #f45e61;
     button {
       width: 100px;
       height: 75px;
-      // border-radius: 110px;
-      font-size: 20px;
-      // box-shadow: -4px 6px #999;
+      border-radius: 80px;
+      font-size: 18px;
     }
-    // button:active {
-    //   background: #c7efcf;
-    //   box-shadow: -2px 4px #666;
-    //   color: #3a2d32;
-    // }
+  }
+  .dash-foot {
+    a {font-size: 18px;}
   }
 }
 @media (min-width: 575px) {
   .dashboard {
     h1 {
-      font-size: 45px;
+     a {font-size: 45px;}
     }
+  }
+  .dash-buttons {
+    button {
+      width: 120px;
+      height: 95px;
+      border-radius: 100px;
+      font-size: 20px;
+    }
+  }
+  .dash-foot {
+    a {font-size: 20px;}
   }
 }
 @media (min-width: 625px) {
@@ -127,14 +135,11 @@ $red: #f45e61;
     button {
       width: 125px;
       height: 100px;
-      // border-radius: 610px;
+      border-radius: 160px;
       font-size: 25px;
-      // box-shadow: -5px 7px #999;
     }
-    // button:active {
-    //   background: #c7efcf;
-    //   box-shadow: -3px 5px #666;
-    //   color: #3a2d32;
-    // }
+  }
+  .dash-foot {
+    a {font-size: 22px;}
   }
 }

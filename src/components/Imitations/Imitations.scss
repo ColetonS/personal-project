@@ -12,7 +12,7 @@ $primary-color: #bfc3ba;
   color: $primary-color;
   a {
     text-decoration: none;
-    color: #0B7A75;
+    color: #32936F;
     animation: 4s infinite breathing;
     transition: .25s;
   }
@@ -93,6 +93,7 @@ $primary-color: #bfc3ba;
 .imitations-buttons {
   display: flex;
   justify-content: space-evenly;
+  border: 1px solid black;
   button {
     border-radius: 20px;
     border: 0.5px solid #0C6291;

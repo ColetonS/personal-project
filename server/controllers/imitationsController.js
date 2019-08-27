@@ -37,8 +37,9 @@ module.exports = {
             const db = req.app.get('db')
             const {completed_imitation_text} = req.body
             const {completed_imitation_id} = req.params
+            const {user_id} = req.session.user
             console.log(completed_imitation_id, completed_imitation_text)
-            const updatedImitation = await db.update_imitation({completed_imitation_id, completed_imitation_text})
+            const updatedImitation = await db.update_imitation({completed_imitation_id, completed_imitation_text, user_id})
             res.status(200).send(updatedImitation)
         }
         catch(err) {
