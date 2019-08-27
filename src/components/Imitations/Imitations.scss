@@ -1,5 +1,6 @@
 $primary-color: #bfc3ba;
 
+
 .main-imitations-container {
   display: flex;
   justify-content: space-evenly;
@@ -9,6 +10,29 @@ $primary-color: #bfc3ba;
   height: 100%;
   width: 100%;
   color: $primary-color;
+  a {
+    text-decoration: none;
+    color: #0B7A75;
+    animation: 4s infinite breathing;
+    transition: .25s;
+  }
+  a:hover {
+    color: #A3D5FF;
+  }
+}
+
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+  }
+  
+  50% {
+    transform: scale(1.2);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
 }
 
 .imitations-header {
@@ -16,6 +40,11 @@ $primary-color: #bfc3ba;
   margin-top: 160px;
   margin-bottom: 10px;
   font-size: 14px;
+}
+
+.imitation-exercise-link {
+  padding-bottom: 30px;
+  padding-top: 20px;
 }
 
 .imitations-container {
@@ -93,10 +122,6 @@ $primary-color: #bfc3ba;
   justify-content: space-evenly;
 }
 
-// .quill-container {
-//   border: 3px solid #0C6291;
-//   border-radius: 20px;
-// }
 .quill {
   height: 300px;
   background: whitesmoke;
@@ -116,6 +141,9 @@ $primary-color: #bfc3ba;
   .imitations-header {
     font-size: 15px;
   }
+  .imitation-exercise-link {
+    font-size: 13px;
+  }
 }
 @media (min-width: 460px) {
   .imitations-container {
@@ -124,6 +152,9 @@ $primary-color: #bfc3ba;
   .imitations-header {
     font-size: 16px;
   }
+  .imitation-exercise-link {
+    font-size: 14px;
+  }
 }
 @media (min-width: 560px) {
   .imitations-container {
@@ -131,6 +162,9 @@ $primary-color: #bfc3ba;
   }
   .imitations-header {
     font-size: 17px;
+  }
+  .imitation-exercise-link {
+    font-size: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -160,6 +194,9 @@ $primary-color: #bfc3ba;
   }
   .imitations-header {
     font-size: 18px;
+  }
+  .imitation-exercise-link {
+    font-size: 16px;
   }
 }
 @media (min-width: 1100px) {

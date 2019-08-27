@@ -4,6 +4,7 @@ import axios from "axios";
 // import {Link} from 'react-router-dom'
 import Quill2 from "../Quill2";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 export default class Imitations extends Component {
   constructor(props) {
@@ -120,6 +121,9 @@ export default class Imitations extends Component {
         <header className="imitations-header">
           <h1>My Imitations</h1>
         </header>
+        <Link to='/imitation-exercise'>
+          <h6 className='imitation-exercise-link'>Keep Imitating!</h6>
+        </Link>
         <div className="imitations-container">{mappedImitations}</div>
       </div>
     );

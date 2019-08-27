@@ -53,9 +53,6 @@ class Landing extends Component {
     return (
       <div className="landing">
         <div className="input-container">
-          {/* <div className="logo">
-            <div>Logo</div>
-          </div> */}
           <h1>Write On</h1>
           <div>
             <p>Username:</p>
